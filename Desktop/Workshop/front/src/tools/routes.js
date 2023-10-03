@@ -4,7 +4,7 @@ import Error404 from '../components/Error404.jsx'
 
 
 const routes = [
-    {path:"/home", component:<Home />},
+    {path:"/", component:<Home />},
     
     {path:"/*", component:<Error404 />}
     

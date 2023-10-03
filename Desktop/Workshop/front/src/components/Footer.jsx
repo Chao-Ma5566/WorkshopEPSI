@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -13,13 +13,10 @@ const Footer = () => {
                     <NavLink to="/" className="hover:underline md:mr-6 ">About</NavLink>
                 </li>
                 <li className="">
-                    <NavLink href="#" className="hover:underline md:mr-6">Privacy Policy</NavLink>
+                    <NavLink href="#" className="hover:underline md:mr-6">Mentions Légales</NavLink>
                 </li>
                 <li className="">
-                    <NavLink href="#" className="hover:underline md:mr-6">Condition de Vente en Ligne</NavLink>
-                </li>
-                <li className="">
-                    <NavLink to="/location" title="Notre Localisation" className="hover:underline">Contact</NavLink>
+                    <NavLink href="#" className="hover:underline md:mr-6">Contact</NavLink>
                 </li>
             </ul>
         </footer>
