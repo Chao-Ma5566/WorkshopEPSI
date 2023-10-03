@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
+
+import PrivateRoute from "./PrivateRoute.jsx"
 import routes from '../tools/routes.js'
-import PrivateRoute from "./PrivateRoute"
 
 const Router = () => {
     return (
@@ -12,9 +13,10 @@ const Router = () => {
                         key={i} 
                         path={path} 
                         element={
-                            <PrivateRoute auth={auth}> 
-                                {component}
-                            </PrivateRoute>
+                            // <PrivateRoute auth={auth}> 
+                            //     {component}
+                            // </PrivateRoute>
+                            component
                         } 
                     />
                 )

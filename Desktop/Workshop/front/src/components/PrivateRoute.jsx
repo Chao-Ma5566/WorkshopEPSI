@@ -1,7 +1,8 @@
 // import {Navigate, useLocation} from "react-router-dom"
-// import {StoreContext} from "../tools/context.js"
+// import {useContext, useEffect, useState} from 'react'
+
 // import {BASE_URL} from "../tools/constante.js"
-// import {useEffect, useContext, useState} from 'react'
+// import {StoreContext} from "../tools/context.js"
 // import axios from 'axios'
 
 // const PrivateRoute = ({children, auth = null}) => {
