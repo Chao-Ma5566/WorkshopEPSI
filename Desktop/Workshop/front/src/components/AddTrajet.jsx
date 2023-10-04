@@ -104,7 +104,7 @@ const AddTrajet = () => {
                 <fieldset className="mt-4 mb-10 border inline w-full lg:w-5/12">
                     <legend className = "mb-3 text-2xl text-gray-500 px-5">Départ</legend>
                     <div>
-                        <label>Date de Départ : <input className="border-solid" type="date" name="date-depart" value={newTrajet.Date_de_depart} /> </label>
+                        <label>Date de Départ : <input className="border-solid" type="date" name="date-depart" value={newTrajet.Date_de_depart}/></label>
                     </div>
                     <div>
                         <label>Heure de Départ : <input type="time" name="heure-depart" value={newTrajet.Heure_de_la_demande}/></label>
