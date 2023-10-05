@@ -4,14 +4,14 @@
 
 @layer base{
   h1 {
-    @apply text-3xl my-8
+    @apply text-center text-3xl my-8
   }
   h2{
-    @apply text-2xl my-2
+    @apply text-center text-2xl  mt-6
   }
-  button {
+  /* button {
     @apply text-gray-100 bg-gray-800 rounded px-1.5 py-0.5 space-y-3 hover:bg-gray-700 duration-500;
-  }
+  } */
   input {
     @apply shadow  border text-center rounded text-gray-700 my-3;
   }

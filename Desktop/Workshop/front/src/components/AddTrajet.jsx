@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useEffect } from 'react';
+import backgroundImg from '../assert/img/cars.png'
 
 const AddTrajet = () => {
+    const backgroundImageStyle = {
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        height: '80vh',
+      };
+
     const [ addressIsChecked, setAddressIsChecked ] = useState(false);
     const [ retourIsChecked, setRetourIsChecked ] = useState(true);
     const [ autreAddressIsChecked, setAutreAddressIsChecked] = useState(false);
@@ -98,16 +106,16 @@ const AddTrajet = () => {
     }
 
     return(
-        <div className="text-center">
+        <div style={backgroundImageStyle} className="text-center">
             <h1>Ajouter un trajet</h1>
             <form onSubmit={submit} className="lg:flex lg:justify-around">
-                <fieldset className="mt-4 mb-10 border inline w-full lg:w-5/12">
+                <fieldset className="bg-white mt-4 mb-10 border inline w-full lg:w-5/12">
                     <legend className = "mb-3 text-2xl text-gray-500 px-5">Départ</legend>
                     <div>
-                        <label>Date de Départ : <input className="border-solid" type="date" name="date-depart" value={newTrajet.Date_de_depart}/></label>
+                        <label>Date de Départ : <input onChange={handleChange} className="border-solid" type="date" name="Date_de_depart" value={newTrajet.Date_de_depart}/></label>
                     </div>
                     <div>
-                        <label>Heure de Départ : <input type="time" name="heure-depart" value={newTrajet.Heure_de_la_demande}/></label>
+                        <label>Heure de Départ : <input onChange={handleChange} type="time" name="Heure_de_la_demande" value={newTrajet.Heure_de_la_demande}/></label>
                     </div>
                     <div>
                         <label className="mb-6">Adresse de Départ : <input type="checkbox" className="form-checkbox text-indigo-600 h-5 w-4 align-middle" checked={addressIsChecked} value={addressIsChecked} onChange={toggleCheckbox} ></input>
@@ -130,7 +138,7 @@ const AddTrajet = () => {
 
                     <div className="py-2">
                         <label>Nombre de places disponibles :
-                            <select name = "places-dispo" className="mb-10" value={newTrajet.Places_disponibles}>
+                            <select onChange={handleChange} name = "Places_disponibles" className="mb-10" value={newTrajet.Places_disponibles}>
                                 <option value={1}>1</option>
                                 <option value={2}>2</option>
                                 <option value={3}>3</option>
@@ -141,19 +149,19 @@ const AddTrajet = () => {
                         </label>
                     </div>
                 </fieldset>
-                <fieldset className=" flex flex-col justify-center mt-4 mb-10 border inline w-full lg:w-5/12">
+                <fieldset className="bg-white flex flex-col justify-center mt-4 mb-10 border inline w-full lg:w-5/12">
                     <legend className = "text-2xl px-5 text-gray-500 mb-3">Retour</legend>
                     <div>
                         <input type="checkbox" className="align-middle form-checkbox text-indigo-600 h-5 w-4" checked={retourIsChecked} value={retourIsChecked} onChange={toggleCheckboxRetour}></input><label>Aller-Retour</label>
                     </div>
                     {retourIsChecked && (
                     <div>
-                        <label>Heure de Retour : <input type="time" name="heure-depart" /></label>
+                        <label>Heure de Retour : <input onChange={handleChange} type="time" name="Heure_de_retour" value={newTrajet.Heure_de_retour} /></label>
                     </div>)}
                 </fieldset>
             </form>
-            <div className="justify-center">
-                <button className="tems-center mb-10 bg-bleu-500 rounded-full h-10 p-2 hover:bg-yellow">Valider mon Trajet</button>
+            <div className="flex justify-center">
+            <button className="text-white bg-blue-500 hover:bg-yellow hover:text-blue-500 rounded-full h-10 mt-6 px-6">Valider mon Trajet</button>
             </div>
         </div>
         )
