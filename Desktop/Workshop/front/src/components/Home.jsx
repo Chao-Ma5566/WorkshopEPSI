@@ -1,3 +1,4 @@
+
 import homeImg from "../assert/img/basketHome.png"
 
 const Home = () => {
@@ -16,8 +17,7 @@ const Home = () => {
                 <br></br>
                 <p class="font-semibold text-xl">Découvrez les Ducs de Loire !</p>
             </div>
-        </div>
-        )
+ )
 }
 
 export default Home
